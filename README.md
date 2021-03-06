@@ -2,19 +2,21 @@ Docker compose for KMITL Big Data Analytics class
 
 ## How to start `PostgreSQL`
 
-### For `Makefile` user
+### Start container
+
+#### For `Makefile` user
 
 ```sh
-make up
+make up/postgresql
 ```
 
-### For `Docker` user 
+#### For `Docker` user 
 
 ```sh
-docker-compose -f resources/docker/docker-compose.yaml up
+docker-compose -f resources/docker/docker-compose.yaml up -d rdbms
 ```
 
-## Then
+### After Start container
 
 You will see [PostgreSQL](https://www.postgresql.org/) running at `port=5432`
 
@@ -28,7 +30,7 @@ Password: secret
 Database name: bigdata
 ```
 
-### For `pgAdmin` user
+#### For `pgAdmin` user
 
 Input username = `admin@pgadmin.org` and password:`12345678` then setup config [example](https://docs.bitnami.com/installer/apps/canvaslms/administration/configure-pgadmin/) by using config below
 
@@ -42,23 +44,23 @@ Password: secret
 ```
 
 ## How to start `MongoDB`
-
-### For `Makefile` user
+### start container
+#### For `Makefile` user
 
 ```sh
-make exec/mongo
+make up/mongo
 ```
 
 And enjoys
 
-### For `Docker` user
+#### For `Docker` user
 
 ```sh
 docker-compose -f resources/docker/docker-compose.yaml up -d nosql
 docker exec -it bigdata-nosql bash
 ```
 
-### After excuted docker container then run
+### After start container
 
 ```sh
 mongo -u root -p 1234
