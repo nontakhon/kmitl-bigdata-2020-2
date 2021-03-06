@@ -1,6 +1,6 @@
 Docker compose for KMITL Big Data Analytics class
 
-## How to start
+## How to start `PostgreSQL`
 
 ### For `Makefile` user
 
@@ -8,7 +8,7 @@ Docker compose for KMITL Big Data Analytics class
 make up
 ```
 
-### For `Docker` user
+### For `Docker` user 
 
 ```sh
 docker-compose -f resources/docker/docker-compose.yaml up
@@ -41,7 +41,7 @@ Username: postgres
 Password: secret
 ```
 
-## Running `MongoDB`
+## How to start `MongoDB`
 
 ### For `Makefile` user
 
