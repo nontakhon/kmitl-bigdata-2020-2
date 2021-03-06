@@ -1,12 +1,16 @@
 DOCKER_COMPOSE_FILE := -f resources/docker/docker-compose.yaml
 
-up: down
+up/postgresql: down
 	docker-compose ${DOCKER_COMPOSE_FILE} up 
 
-up/db: down
+up/mongo: down
+	docker-compose ${DOCKER_COMPOSE_FILE} up -d nosql
+	docker exec -it bigdata-nosql bash
+
+up/all: down
 	docker-compose ${DOCKER_COMPOSE_FILE} up rdbms nosql
 
-up/reset: down
+reset/all: down
 	sudo rm -rf ./resources/docker/postgresql/data
 	sudo rm -rf ./resources/docker/mongodb/data
 
@@ -16,6 +20,3 @@ down:
 logs:
 	docker-compose ${DOCKER_COMPOSE_FILE} logs -f
 
-exec/mongo: down
-	docker-compose ${DOCKER_COMPOSE_FILE} up -d nosql
-	docker exec -it bigdata-nosql bash
