@@ -13,22 +13,15 @@ make up/postgresql
 #### For `Docker` user 
 
 ```sh
-docker-compose -f resources/docker/docker-compose.yaml up -d rdbms
+docker-compose -f resources/docker/docker-compose.yaml up -d rdbms pgAdmin
 ```
 
 ### After Start container
 
 You will see [PostgreSQL](https://www.postgresql.org/) running at `port=5432`
 
-For access the database you can use [pgAdmin](http://localhost:8080) or [DBeaver](https://dbeaver.io/) or whatever you like and use setting config below for connect the database
-
-```sh
-Host: localhost
-Port: 5432
-User: postgres
-Password: secret
-Database name: bigdata
-```
+For access the database you can use [pgAdmin](http://localhost:8999) or [DBeaver](https://dbeaver.io/) or whatever you like. 
+In my docker compose use pgAdmin.
 
 #### For `pgAdmin` user
 
