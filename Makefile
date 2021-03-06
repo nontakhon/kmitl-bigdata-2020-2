@@ -1,7 +1,7 @@
 DOCKER_COMPOSE_FILE := -f resources/docker/docker-compose.yaml
 
 up/postgresql: down
-	docker-compose ${DOCKER_COMPOSE_FILE} up 
+	docker-compose ${DOCKER_COMPOSE_FILE} up rdbms
 
 up/mongo: down
 	docker-compose ${DOCKER_COMPOSE_FILE} up -d nosql
