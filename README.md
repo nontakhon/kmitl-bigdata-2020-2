@@ -32,7 +32,7 @@ Database name: bigdata
 
 #### For `pgAdmin` user
 
-Input username = `admin@pgadmin.org` and password:`12345678` then setup config [example](https://docs.bitnami.com/installer/apps/canvaslms/administration/configure-pgadmin/) by using config below
+Input username = `admin@pgadmin.org` and password:`1234` then setup config [example](https://docs.bitnami.com/installer/apps/canvaslms/administration/configure-pgadmin/) by using config below
 
 ```sh
 Name: bigdata
